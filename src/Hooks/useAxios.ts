@@ -11,6 +11,8 @@ export const useAxios = (filterBy?: number) => {
   const [error, setError] = useState();
   const url = "http://localhost:3500/clothes";
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     setLoading(true);
 
@@ -23,6 +25,7 @@ export const useAxios = (filterBy?: number) => {
           });
         } else {
           setData(res.data);
+          dispatch(setClothes(res.data));
         }
       })
       .catch((err) => {
