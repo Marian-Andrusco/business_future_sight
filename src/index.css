@@ -9,3 +9,13 @@ body {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+
+.shadow-1 {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.heroSection {
+  /* background-image: url("images/Iron-Man.jpg");
+  background-position: top;
+  background-size: contain; */
+}

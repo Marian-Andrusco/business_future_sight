@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import clothesReducer from "./ClothesSlice";
-import counterSlice from "./CounterSlice";
+// import clothesReducer from "../learningPurposes/reduxSlices/ClothesSlice";
+// import counterSlice from "../learningPurposes/reduxSlices/CounterSlice";
 
 export const store = configureStore({
   reducer: {
-    clothesSlice: clothesReducer,
-    counterSlice: counterSlice,
+    // clothesSlice: clothesReducer,
+    // counterSlice: counterSlice,
   },
 });
 
