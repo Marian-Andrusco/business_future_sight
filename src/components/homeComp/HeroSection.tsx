@@ -1,19 +1,23 @@
+import { FaBalanceScaleLeft } from "react-icons/fa";
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center heroSection mb-8">
-      <h1 className="font-bold text-6xl mb-8 text-lime-400">Grow and Scale</h1>
-      <div className="w-[800px] h-[450px] ">
-        <iframe
-          className="rounded-3xl shadow-1"
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/EWPiCNL0Ai8?si=vpUvd8QQ2VBF8s7V"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+    <div className=" mb-8 grid grid-cols-2 gap-3">
+      <div>
+        <h1 className="font-bold text-6xl mb-8 primary">
+          Grow and Scale
+          <hr className="line" />
+        </h1>
+
+        <h4 className="mb-2">How our business can help your business?</h4>
+        <h4 className="mb-2">From a business to another business</h4>
+        <h4 className="mb-2">Partner to Partner </h4>
+        <p>
+          Scroll to find out about our product and what it offers to you. Our
+          final goal is for you to grow your business as much as you like.
+        </p>
+      </div>
+      <div className="flex justify-center primary">
+        <FaBalanceScaleLeft className="text-[250px]" />
       </div>
     </div>
   );

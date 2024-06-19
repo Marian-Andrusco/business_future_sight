@@ -1,0 +1,19 @@
+.nav_btn {
+  color: $color10;
+  padding: 8px 12px;
+
+  &_log {
+    border: 1px solid $color10;
+    border-radius: 20%;
+
+    &:hover {
+      border: 1px solid $color6;
+    }
+  }
+
+  &:hover {
+    color: $color6;
+  }
+
+  transition: all 0.5s ease;
+}

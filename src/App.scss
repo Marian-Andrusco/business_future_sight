@@ -1,0 +1,14 @@
+@import "./colors";
+@import "./btn";
+
+.primary {
+  color: $color6;
+}
+
+.line {
+  border: 1px solid $color6;
+}
+
+.shadow-1 {
+  box-shadow: rgba(92, 81, 0, 0.45) 0px 10px 20px 5px;
+}

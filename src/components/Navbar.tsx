@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaGhost, FaBars, FaWindowClose } from "react-icons/fa";
+import { FaGhost, FaBars, FaWindowClose, FaDAndD } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -7,7 +7,8 @@ const Navbar = () => {
   const [showNavBar, setShowNavBar] = useState(false);
 
   const handleResize = () => {
-    if (window.innerWidth > 640) {
+    if (window.innerWidth > 780) {
+      setShowNavBar(false);
       setCollapse(false);
     } else {
       setCollapse(true);
@@ -21,48 +22,48 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex justify-around shadow-1  font-medium mb-8 h-[56px] ">
-      <div className="container px-4 md:px-10 flex justify-between items-center">
+      <div className="container md:px-6 flex justify-between items-center">
         {collapse ? (
           ""
         ) : (
-          <div className="left w-2/5 flex justify-between p-2 ">
-            <Link className="hover:text-lime-400" to="/main">
+          <div className="left w-2/5 flex justify-between ">
+            <Link className="nav_btn" to="/main">
               Features
             </Link>
-            <Link className="hover:text-lime-400" to="/main">
-              About
+            <Link className="nav_btn" to="/main">
+              G&S
             </Link>
-            <Link className="hover:text-lime-400" to="/main">
+            <Link className="nav_btn" to="/main">
               Law
             </Link>
           </div>
         )}
-        <div className="w-1/5 flex justify-center p-2">
-          <Link className="hover:text-lime-400" to="/">
-            <FaGhost style={{ fontSize: 40 }} />
+        <div className="w-1/5 flex justify-center">
+          <Link className="nav_btn" to="/">
+            <FaDAndD style={{ fontSize: 40 }} />
           </Link>
         </div>
 
         {collapse ? (
           ""
         ) : (
-          <div className="right w-2/5 flex justify-between p-2">
-            <Link className="hover:text-lime-400" to="/main">
+          <div className="right w-2/5 flex justify-between">
+            <Link className="nav_btn" to="/main">
               Contact
             </Link>
-            <Link className="hover:text-lime-400" to="/main">
+            <Link className="nav_btn" to="/main">
               Subscriptions
             </Link>
-            <Link className="hover:text-lime-400" to="/main">
+            <Link className="nav_btn nav_btn_log" to="/main">
               Log In
             </Link>
           </div>
         )}
 
         {collapse ? (
-          <div className="w-1/5 flex justify-center p-2">
+          <div className="w-1/5 flex justify-center">
             <button
-              className="hover:text-lime-400"
+              className="nav_btn"
               onClick={() => setShowNavBar((prev) => !prev)}
             >
               {showNavBar ? (
@@ -78,45 +79,45 @@ const Navbar = () => {
 
         {showNavBar ? (
           <div className="w-full h-full flex justify-around absolute left-0 top-14 right-0 bg-neutral-500/75 z-10 p-4">
-            <div className="container h-fit bg-white shadow-1 p-4 rounded-3xl">
+            <div className="container h-fit bg-[#1e2328] shadow-1 p-4 rounded-3xl">
               <Link
                 onClick={() => setShowNavBar(false)}
-                className="hover:text-lime-400 block mb-2"
+                className="nav_btn block mb-2"
                 to="/main"
               >
                 Features
               </Link>
               <Link
                 onClick={() => setShowNavBar(false)}
-                className="hover:text-lime-400 block mb-2"
+                className="nav_btn block mb-2"
                 to="/main"
               >
-                About
+                G&S
               </Link>
               <Link
                 onClick={() => setShowNavBar(false)}
-                className="hover:text-lime-400 block mb-2"
+                className="nav_btn block mb-2"
                 to="/main"
               >
                 Law
               </Link>
               <Link
                 onClick={() => setShowNavBar(false)}
-                className="hover:text-lime-400 block mb-2"
+                className="nav_btn block mb-2"
                 to="/main"
               >
                 Contact
               </Link>
               <Link
                 onClick={() => setShowNavBar(false)}
-                className="hover:text-lime-400 block mb-2"
+                className="nav_btn block mb-2"
                 to="/main"
               >
                 Subscriptions
               </Link>
               <Link
                 onClick={() => setShowNavBar(false)}
-                className="hover:text-lime-400 block mb-2"
+                className="nav_btn block mb-2"
                 to="/main"
               >
                 Log In
